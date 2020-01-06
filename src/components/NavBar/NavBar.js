@@ -4,7 +4,7 @@ import { Popover, Badge, Avatar } from 'antd';
 import { Link } from 'dva/router';
 import cx from 'classnames';
 import './style/index.less';
-import logoImg from 'assets/images/logo.png';
+import logoImg from 'assets/images/popo_default_head_32.png';
 import SearchBox from './SearchBox';
 
 /**
@@ -87,8 +87,8 @@ class NavBar extends PureComponent {
         <div className="navbar-branding">
           <Link className="navbar-brand" to="/">
             <img src={logoImg} alt="logo" />
-            <b>LANIF</b>
-            Admin
+            <b>POPO</b>
+            QAWeb
           </Link>
           <span className="toggle_sidemenu_l" onClick={onCollapseLeftSide}>
             <Icon type="lines" />
@@ -98,13 +98,13 @@ class NavBar extends PureComponent {
           {collapsed || isMobile ? null : (
             <li>
               <a className="sidebar-menu-toggle" onClick={toggleSidebarHeader}>
-                <Icon type="ruby" />
+                <Icon type="user" />
               </a>
             </li>
           )}
           <li>
             <a onClick={onExpandTopBar}>
-              <Icon type="wand" />
+              <Icon type="plus" />
             </a>
           </li>
           {isMobile ? (
@@ -135,8 +135,8 @@ class NavBar extends PureComponent {
         )}
         <ul className="nav navbar-nav navbar-right clearfix">
           <li>
-            <a href="https://github.com/LANIF-UI/dva-boot-admin">
-              <Icon type="github" antd />
+            <a href="https://gitlab.nie.netease.com/">
+              <Icon type="gitlab" antd />
             </a>
           </li>
           <li className="dropdown">
@@ -148,7 +148,7 @@ class NavBar extends PureComponent {
               trigger="click"
             >
               <a className="dropdown-toggle">
-                <Icon type="radio-tower" />
+                <Icon type="mail" />
               </a>
             </Popover>
           </li>
@@ -162,7 +162,9 @@ class NavBar extends PureComponent {
             >
               <a className="dropdown-toggle">
                 <Badge dot>
-                  <Avatar src={require('assets/images/avatar.jpg')}>
+                  <Avatar
+                    src={require('assets/images/popo_default_male_52.png')}
+                  >
                     {user.userName}
                   </Avatar>
                 </Badge>

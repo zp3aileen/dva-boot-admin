@@ -13,8 +13,8 @@ export default {
   /**
    * HTML的title模板
    */
-  htmlTitle: 'DBAdmin - {title}',
-  
+  htmlTitle: 'POPO-QAWeb - {title}',
+
   /**
    * 系统通知
    */
@@ -26,7 +26,7 @@ export default {
 
     // 每次请求头部都会带着这些参数
     withHeaders: () => ({
-      token: store.getStore("token"),
+      token: store.getStore('token')
     }),
 
     /**
@@ -60,11 +60,11 @@ export default {
       // RequestError为拦截请求异常
       if (errName === 'RequestError') {
         notice.error(err.message);
-        console.error(err); 
+        console.error(err);
       } else {
         console.error(err);
       }
-    },
+    }
   },
 
   // 分页助手
