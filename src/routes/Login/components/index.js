@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'dva';
 import { Link } from 'dva/router';
 import { Form, Layout, Button, Icon, Input, Checkbox, Spin } from 'antd';
-import logoImg from 'assets/images/logo1.png';
+import logoImg from 'assets/images/popo_default_head_96.png';
 import './index.less';
 const { Content } = Layout;
 const FormItem = Form.Item;
@@ -42,7 +42,9 @@ class Login extends Component {
               <FormItem>
                 {getFieldDecorator('userName', {
                   initialValue: 'admin',
-                  rules: [{ required: true, message: '请输入您的用户名，示例admin' }]
+                  rules: [
+                    { required: true, message: '请输入您的用户名，示例admin' }
+                  ]
                 })(
                   <Input
                     size="large"
@@ -54,7 +56,9 @@ class Login extends Component {
               <FormItem>
                 {getFieldDecorator('password', {
                   initialValue: 'admin',
-                  rules: [{ required: true, message: '请输入您的密码，示例admin' }]
+                  rules: [
+                    { required: true, message: '请输入您的密码，示例admin' }
+                  ]
                 })(
                   <Input
                     size="large"
